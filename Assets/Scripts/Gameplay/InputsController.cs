@@ -30,11 +30,12 @@ public class InputsController : MonoBehaviour
 
     private void OnHeroJobChanged(InputAction.CallbackContext ctx) => ChangeJob(hero.GetJobsOptions);
     private void OnLeaderChanged(InputAction.CallbackContext ctx) => PassLeaderToNextone();
+
     void Start()
     {
         hero = GetComponent<Hero>();
         ChangeJob(hero.GetJobsOptions);
-        
+       
     }
 
     void ChangeJob(JobsOptions job)
